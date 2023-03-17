@@ -47,7 +47,7 @@ export default function Register() {
 
                     <div className="text-center">Already have an account ? <a className="text-blue-600 hover:cursor-pointer" onClick={(e) => {
                         e.preventDefault();
-                        navigate("login");
+                        navigate("/login");
                     }}>Click here</a></div>
                 </form>
             </div>
