@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "rJbXJnp9YPmN5PIvMEKHKNW7ahaV7vEXBqvRDQrQn4ouDQuWIWhp0ULuwsxcmukFdW2U1ssuaHivrCsS6yIr9g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Somnath_Roy\\Documents\\office\\Coding Katas\\17-03-2023\\Movie-Booking-System\\Backend\\MovieBookingSystem\\API\\API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Somnath_Roy\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Somnath_Roy\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Somnath_Roy\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\Somnath_Roy\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\Somnath_Roy\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\Somnath_Roy\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
