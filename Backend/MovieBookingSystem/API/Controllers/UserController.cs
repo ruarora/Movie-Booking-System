@@ -1,4 +1,5 @@
 ﻿using API.Model;
+using API.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,22 +9,10 @@ namespace API.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        public static List<User> UserList = new List<User>()
+        private readonly IUserService _userService;
+        public UserController(IUserService userService)
         {
-            new User(){
-                Name = "Admin",
-                Email = "admin@admin.com",
-                Password = "admin123" // can be hashed later on. 
-            },
-            new User(){
-            Name = "User",
-                Email = "user@user.com",
-                Password = "user123" // can be hashed later on. 
-            }
-        };
-        public UserController()
-        {
-
+            _userService = userService;
         }
         [HttpPost]
         [Route("login")]
@@ -31,7 +20,7 @@ namespace API.Controllers
             if(userDetails == null)
                 return BadRequest("Invalid Request");
 
-            var isUserExists = UserList.Exists(x => x.Email == userDetails.Email && x.Password == userDetails.Password);
+            var isUserExists = _userService.Login(userDetails);
 
             return Ok(isUserExists);
         }
@@ -41,14 +30,12 @@ namespace API.Controllers
             if (user == null)
                 return BadRequest("Invalid Request");
 
-            var isUserExists = UserList.Exists(x => x.Email == user.Email);
+            var isRegisterSuccessful = _userService.Register(user);
 
-            if (isUserExists)
+            if (!isRegisterSuccessful)
             {
                 return BadRequest("User Already Exists!");
             }
-
-            UserList.Add(user);
 
             return Ok();
         }

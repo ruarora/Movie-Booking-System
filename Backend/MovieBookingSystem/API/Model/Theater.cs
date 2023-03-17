@@ -6,6 +6,6 @@
         public string TheaterName { get; set; }
         public int CityId { get; set; }
         public List<Screen> Screens { get; set; }
-        //public int MovieId { get; set; }
+        public string Address { get; set; }
     }
 }
